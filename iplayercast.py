@@ -77,7 +77,8 @@ def main():
 
 def run():
 	# print a warning about copyright
-	
+	print("WARNING: Do not use the script to produce public podcasts, it is for personal use only.")
+	print("If you publically serve programmes you may be in violation of the BBC's copyright.")
 	
 	# load the config file
 	global master_config
