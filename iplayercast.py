@@ -91,7 +91,7 @@ def run():
 		get_iplayer_path = master_config.get("General", "get-iplayer_path")
 		
 	# refresh the get-iplayer cache
-	print("Refreshing get-iplayer... (this make take some time)")
+	print("Refreshing get-iplayer... (this may take some time)")
 	subprocess.check_output([get_iplayer_path, "--type=all", "--quiet"])
 	
 	# scan for feed config files and process each
