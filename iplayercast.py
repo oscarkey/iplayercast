@@ -76,6 +76,9 @@ def main():
 
 
 def run():
+	# print a warning about copyright
+	
+	
 	# load the config file
 	global master_config
 	master_config = RawConfigParser()
