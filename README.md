@@ -3,7 +3,7 @@ Copyright 2013 Oscar Key
 Licensed under GPL v3. See below and LICENSE.  
 A python script that downloads BBC iPlayer programmes and builds them into a podcast feed.  
 
-The script searches iPlayer for the given programmes and downloads them. It then produces a podcast xml feed which could be subscribed to with a podcast reader application. In order for this to happen the output directory should be served by a webserver.
+The script searches iPlayer for the given programmes and downloads them. It then produces a podcast xml feed which could be subscribed to with a podcast reader application. In order for this to happen the output directory should be served by a webserver. It uses get-iplayer to retrieve the programmes, thus it and all its dependancies must be installed.
 
 **Usage:** python3 iplayercast -c [config directory]  
 [config directory] should contain:  
