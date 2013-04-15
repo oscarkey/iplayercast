@@ -273,7 +273,7 @@ def write_feed_rss(feed_config, feed):
 		#output_file.write("<link>" + rssItemURL + relativePath + "</link>\n")
 		output_file.write("<guid>" + programme.pid + "</guid>\n")
 		output_file.write("<pubDate>" + format_date(programme.date_loaded) + "</pubDate>\n")
-		output_file.write("<enclosure url=\"" + file_url + "\" length=\"" + file_size + "\" type=\"m4a\" />\n")
+		output_file.write("<enclosure url=\"" + file_url + "\" length=\"" + file_size + "\" type=\"" + get_extension(file_url) + "\" />\n")
 		output_file.write("</item>\n")
 	
 	# write footer
@@ -287,6 +287,11 @@ def write_feed_rss(feed_config, feed):
 
 def format_date(date):
 	return date.strftime("%a, %d %b %Y %H:%M:%S +0000")
+
+
+def get_extension(filename):
+	split = filename.split(".")
+	return split[split.__len__() - 1]
 
 
 # catch this module being run directly
