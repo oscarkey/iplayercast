@@ -121,7 +121,7 @@ def load_feed(config_filename):
 	searches = feed_config.get("General", "searches").split(",")
 	# loop and retrieve details for each search using get-iplayer, insert it into the feed if not already present
 	for search in searches:
-		programmes = get_programmes(search)
+		programmes = get_programmes(search.strip())
 		
 		# check if the feed already contains each programme, if not add it
 		for new_programme in programmes:
